@@ -2,6 +2,6 @@
 import { NextResponse } from 'next/server'
  
 export async function POST(request: Request) {
-  const res   = await request.json()   
-  return NextResponse.json({resp: res, resp_string: JSON.stringify(res)})
+  const res   = await request.text()  
+  return NextResponse.json({res: res})
 } 
